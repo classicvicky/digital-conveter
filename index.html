@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="asset/convert.css">
+    <title>Digital Converter</title>
+</head>
+<body>
+    <div class="body">
+        <div class="second">
+        <h1> DIGITAL CONVERTER <br> <span>APPLICATION</span> </h1> 
+            </div>
+
+        <div class="first">
+            <div class="b">
+                <h2>WEIGHT CONVERTER</h2>
+        <div class="button">
+                <button id="tonne"> Tonnes - Kilograms</button>
+                <button id="kilograms">Kilograms - Tonnes</button> <br> <br>
+                <button id="stone" onclick="myFunction()">Stone - Ounces
+                </button>
+                    <button id="ounces">Ounce - Stone</button>
+                </div>
+
+                <p id="direct"></p>
+
+                <form id="form">
+                    <input type="text" id="number"> <br> <br>
+                    <input type="submit" value="Convert" id="convert">
+                </form>
+                <p id="output"></p>
+            </div>
+
+            <div class="a"></div>
+         </div>
+         </div>
+
+         <script src="main.js"></script>
+         <script>
+            const tonne = document.getElementById('tonne');
+            const kilograms = document.getElementById('kilograms');
+            const stone = document.getElementById('stone');
+            const ounces = document.getElementById('ounces');
+            const direct = document.getElementById('direct');
+            const form = document.getElementById('form');
+            const convert = document.getElementById('convert');
+            const output = document.getElementById('output');
+
+
+            tonne.addEventListener('click', function(){
+            convertType = 'tonne';
+             direct.innerHTML = 'Type in a number of tonne';
+})
+
+            kilograms.onclick = function(){
+            convertType = 'kilograms';
+            direct.innerHTML = 'Type in a number of kilogram';  
+}
+
+            function myFunction(){
+            convertType = 'stone';
+            direct.innerHTML = 'Type in a number of stone';
+}
+
+            function myFunction2(){
+            convertType = 'ounces';
+            direct.innerHTML = 'Type in a number of ounces';
+}
+
+            ounces.onclick = function(){
+    myFunction2()
+}
+
+        </script>
+</body>
+</html>
